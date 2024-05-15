@@ -1,0 +1,116 @@
+=min($value)
+  @media (min-width: #{$value}px)
+    @content
+
+=max($value)
+  @media (max-width: #{$value}px)
+    @content
+
+=min-max($min, $max)
+  @media only screen and (min-width: #{$min}px) and (max-width: #{$max}px)
+    @content
+
+=mobile($value: 0)
+  @if $value == 0
+    @media (max-width: 767px)
+      @content
+  @else
+    @media (max-width: 480px)
+      @content
+
+=tablet($value: 0)
+  @if $value == 0
+    @media (max-width: 991px)
+      @content
+  @else
+    @media (min-width: 992px)
+      @content
+
+=sd($value: 0)
+  @if $value == 0
+    @media (max-width: 1199px)
+      @content
+  @else
+    @media (min-width: 1200px)
+      @content
+
+=xl($value: 0)
+  @if $value == 0
+    @media (max-width: 1600px)
+      @content
+  @else
+    @media (max-width: 1280px)
+      @content
+
+=landscape($from,$to)
+  @media only screen and (min-device-width : #{$from}px) and (max-device-width : #{$to}px) and (orientation: landscape)
+    @content
+
+=ff($name,$fname,$weight:normal)
+  @font-face
+    font-family: '#{$name}'
+    src: url('../fonts/#{$fname}.eot')
+    src: url('../fonts/#{$fname}.eot?#iefix') format('embedded-opentype'), url('../fonts/#{$fname}.woff2') format('woff2'), url('../fonts/#{$fname}.woff') format('woff'), url('../fonts/#{$fname}.ttf')  format('truetype'), url('../fonts/#{$fname}.svg#svgFontName') format('svg')
+    font-weight: $weight
+    font-display: swap
+
+
+@mixin max-width($value)
+  max-width: $value
+  flex: 0 0 $value
+
+@mixin hover
+  &:hover
+    transition: all .4s ease-in-out
+    cursor: pointer
+    @content
+
+@mixin align_center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50% , -50%)
+  
+@mixin img_abs($obj_fit)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  object-fit: $obj_fit
+
+@mixin img_rel($padding)
+  position: relative
+  width: 100%
+  padding-top: $padding
+  overflow: hidden
+  
+@mixin before($top,$right,$bottom,$left,$width,$height,$pos)
+  content: ''
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+  width: $width
+  height: $height
+  background-position: $pos
+  background-repeat: no-repeat
+  transition: .2s ease
+
+
+@mixin after($top,$right,$bottom,$left,$width,$height,$pos,$bgimg)
+  content: ''
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+  width: $width
+  height: $height
+  background-position: $pos
+  background-repeat: no-repeat
+  transition: .2s ease
+  background-image: $bgimg

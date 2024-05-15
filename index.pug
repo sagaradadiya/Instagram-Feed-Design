@@ -1,0 +1,136 @@
+extends _layout.pug
+block csslinks
+    link(rel='stylesheet', href='assets/css/home.css')
+
+block content
+    // =========> Hero section html start ===========-
+    section.pt__comman-hero-sec(style='background-image: url(assets/images/hero.png)').pt__hero
+        .container 
+            .pt__comman-hero-inner
+                h1 Business communications with a conscience
+                p Our vision is to drive innovation through sustainable methods, delivering leading-edge technologies in line with our Net Zero target and sustainability policies.
+                a.btn(href="#").primary_btn Get in touch
+                .pt__hero-ic
+                    a.pt_scroll(href='#pt_about')
+                        span.pt_scroll-down
+
+    section.pt__products-solutions.pt__common_pad 
+        .container 
+            .section-title(data-aos="fade-up") 
+                h2 Products & Solutions
+                p We provide a wide range of Telecoms products & technological solutions to suit your business needs.
+            .row.pt__product--flip(data-aos="fade-up") 
+                .col-6 
+                    .pt__products-solutions--left
+                        h4 Telecoms
+                        p Planet is a true independent, vendor-agnostic supplier. We pride ourselves in listening to our customers’ requirements and designing bespoke, tailor-made solutions to exceed their expectations.
+                .col-6 
+                    .pt__products-solutions--right 
+                        img(src="assets/images/Image12.png", alt="img")
+            .row.pt__product--flip(data-aos="fade-up") 
+                .col-6 
+                    .pt__products-solutions--left
+                        h4 Connectivity
+                        p Often key in delivering ultra-efficient solutions in flexible working practises is the ability to supply on demand business-critical data connectivity. At Planet, we can design and build solutions up to 100GB.
+                .col-6 
+                    .pt__products-solutions--right 
+                        img(src="assets/images/Image11.png", alt="img")
+            .row.pt__product--flip(data-aos="fade-up") 
+                .col-6 
+                    .pt__products-solutions--left
+                        h4 Mobile
+                        p At Planet, we understand that one size does not fit all, so choice is imperative. As such, we have an extensive portfolio covering all four UK networks for you to mix and match to find your perfect fit. Our expert team will walk you through key business solutions including eSIM’s, IoT and M2M applications.
+                .col-6 
+                    .pt__products-solutions--right 
+                        img(src="assets/images/Image13.png", alt="img")
+            .row.pt__product--flip(data-aos="fade-up") 
+                .col-6 
+                    .pt__products-solutions--left
+                        h4 IT
+                        p We understand the crucial role that technology plays in today’s business landscape. That’s why we offer comprehensive IT Managed Services, tailored to meet your organisation’s specific needs. Whether you are a small business looking for a reliable IT partner, or a large enterprise seeking to streamline your IT operations, we have the expertise and experience to support you every step of the way.
+                .col-6 
+                    .pt__products-solutions--right 
+                        img(src="assets/images/Image11.png", alt="img")
+            .row.pt__product--flip(data-aos="fade-up") 
+                .col-6 
+                    .pt__products-solutions--left
+                        h4 Meeting Room Tech
+                        p In today’s flexible working environment, Meeting Room design has become more actively focused. Providing employees with freedom of UC choice to create seamless AV experiences is key. We support over 30 conferencing providers for ‘One Touch Join’ to provide a scalable and seamless solution.
+                .col-6 
+                    .pt__products-solutions--right 
+                        img(src="assets/images/Image13.png", alt="img")
+    section.pt__about.pt__common_pad
+        .container
+            .section-title(data-aos="fade-up") 
+                h2 About Planet Telecom
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem ccusantium.
+            .row 
+                .col-6 
+                    .pt__about--left(data-aos="fade-up") 
+                        p Adipiscing curabitur erat ligula vel turpis sem convallis consectetur consequat nullam vestibulum lectus a facilisi bibendum. Ullamcorper sit dolor sagittis ultrices vel egestas dui facilisis luctus ullamcorper in venenatis quis ullamcorper nec ac quisque imperdiet a consequat nibh lacinia commodo a dis purus parturient et.  
+                        p Dui risus arcu vivamus scelerisque ad rhoncus facilisi parturient posuere aliquet viverra fermentum in congue etiam scelerisque ad posuere eu.
+                        p Ullamcorper convallis amet imperdiet lacinia scelerisque a vestibulum rhoncus parturient penatibus parturient a volutpat nulla eros neque vestibulum felis tempus eget.  
+                .col-6 
+                    .pt__about--right(data-aos="fade-up")  
+                        p Feugiat scelerisque mus et dis aliquet cum euismod quam suspendisse a ante a blandit odio in primis. Condimentum ac parturient magnis nascetur sem in sociis duis ac at facilisi curae interdum scelerisque tellus habitant.
+                        p Sagittis aenean fermentum a a a curabitur lacinia mi a facilisis natoque phasellus nisi duis vestibulum a ullamcorper enim erat rhoncus pulvinar gravida dis pulvinar a. 
+                        p Litora vestibulum odio dignissim vulputate vestibulum parturient congue fringilla nam suspendisse a vestibulum congue ullamcorper lacinia ligula vestibulum est aenean vestibulum ut venenatis curabitur sodales vel.
+                        p 
+                            span For more information on our vision, drop us a line.
+                .col-12 
+                    .pt__about--btn(data-aos="fade-up")  
+                        a(href="#").secondary_btn Get in touch
+
+    section.pt__connection(style='background-image: url(assets/images/connection.png)').pt__common_pad
+        .container 
+            .row 
+                .col-40
+                    .pt__connection--left(data-aos="fade-up")  
+                        img(src="assets/images/B-Corp.png", alt="")
+                .col-8
+                    .pt_connection--right(data-aos="fade-up")  
+                        .section-title 
+                            h2 Making Connections to a Greener Future
+                            p Through collaborations with environmental organizations and initiatives, we are championing sustainability as a core value. With a comprehensive approach to sustainability, Planet Telecom is not only providing cutting-edge telecommunication services but also actively contributing to a greener and more sustainable future for all.
+                            p From eco-friendly infrastructure to green data centers, we are paving the way for a sustainable and connected world. We actively engage in responsible e-waste management, promoting recycling programs, and encourage our customers to adopt sustainable practices. 
+                            p We are also investing heavily in innovative research and development projects to enhance energy efficiency in our network infrastructure, ensuring that our operations have minimal impact on the environment. 
+    section.pt__contact.pt__common_pad 
+        .container
+            .section-title 
+                h2 Contact Us
+            .row 
+                .col-3 
+                    .pt__contact_card(data-aos="fade-up")  
+                        .pt__contact_icon 
+                            img(src="assets/images/info.png", alt="info")
+                        h4 Phone
+                        p +44 (0) 203 9888 988
+                        a(href="tel:+4402039888988").secondary_btn Call
+                .col-3 
+                    .pt__contact_card(data-aos="fade-up")  
+                        .pt__contact_icon 
+                            img(src="assets/images/message.png", alt="info")
+                        h4 Support
+                        p +44 (0) 203 9888 333
+                        a(href="tel:+4402039888333").secondary_btn Call
+                .col-3 
+                    .pt__contact_card(data-aos="fade-up")  
+                        .pt__contact_icon 
+                            img(src="assets/images/telegram.png", alt="info")
+                        h4 Email
+                        p contactus@planet-telecom.tech
+                        a(href="mailto:contactus@planet-telecom.tech").secondary_btn Compose
+                .col-3 
+                    .pt__contact_card(data-aos="fade-up")  
+                        .pt__contact_icon 
+                            img(src="assets/images/wp.png", alt="info")
+                        h4 WhatsApp
+                        p +44 (0) 7700 123 456
+                        a(href="tel:+4407700123456").secondary_btn Chat
+
+
+ 
+
+
+
+    

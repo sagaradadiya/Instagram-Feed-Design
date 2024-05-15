@@ -1,0 +1,146 @@
+@import "_variable"
+
+.pt__footer
+    background-color: $black
+    color: $primary_color
+    padding: 3.64rem 0
+    .pt__footer_left
+        display: flex
+        padding-bottom: 60px
+        gap: 10px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 90%
+            height: 1px
+            background-color: $primary_color
+            top: 100%
+            left: 0
+        .pt__footer_menu_list
+            flex: 0 0 33.33%
+            max-width: 33.33%
+            &:last-child
+                display: none
+            .pt__footer_right
+                display: none
+            ul
+                display: flex
+                flex-direction: column
+                gap: 45px
+                a 
+                    color: $primary_color
+                    transition: all 0.5s
+                    &:hover
+                        opacity: 0.5
+            p
+                font-size: 1rem
+    .pt__footer_bottom
+        display: flex
+        gap: 20px
+        margin-top: 50px
+        a,p
+            color: $primary_color
+            font-size: 1rem
+            opacity: 0.4
+        .footer_rights
+            flex: 0 0 66.67%
+            max-width: 66.67%
+        .footer_sitemap
+            flex: 0 0 33.33%
+            max-width: 33.33%
+            a
+                transition: all 0.5s
+                &:hover
+                    opacity: 1
+    .pt__footer_right > a 
+        white-space: nowrap
+        &:last-child
+            font-size: 0.9rem
+    .pt__footer_right
+        display: flex
+        flex-direction: column
+        gap: 40px
+        a
+            color: $primary_color
+            transition: all 0.5s
+            &:hover
+                opacity: 0.5
+        h4
+            font-size: 1.18rem
+        .pt__footer_social
+            display: flex
+            gap: 1.06rem
+            a
+                display: inline-block
+                width: 30px
+                height: 30px
+            img
+                width: 30px
+                height: 30px
+                object-fit: contain
+
++tablet 
+    .pt__footer
+        .col-7,.col-3
+            max-width: 100%
+            flex: 0 0 100%
+        .pt__footer_left
+            row-gap: 50px
+            flex-wrap: wrap
+            .pt__footer_menu_list
+                flex: 0 0 calc(50% - 15px)
+                max-width: calc(50% - 15px)
+                &:last-child
+                    display: block
+                .pt__footer_right
+                    display: flex
+        .pt__footer_bottom
+            .footer_sitemap
+                flex: 0 0 20%
+                max-width: 20%
+        .pt__footer_right
+            display: none
+
+    
++max(575)
+    .pt__footer
+        .col-7,.col-3
+            max-width: 100%
+            flex: 0 0 100%
+        .pt__footer_left
+            row-gap: 20px
+            padding-bottom: 30px
+            .pt__footer_menu_list
+                flex: 0 0 100%
+                max-width: 100%
+                &:last-child
+                    display: block
+                ul
+                    gap: 20px
+                .pt__footer_right
+                    display: flex
+                    margin-top: 30px
+        .pt__footer_bottom
+            flex-direction: column-reverse
+            margin-top: 30px
+            .footer_rights
+                flex: 0 0 100%
+                max-width: 100%
+            .footer_sitemap
+                flex: 0 0 100%
+                max-width: 100%
+        .pt__footer_right
+            display: none
+            gap: 20px
+            .pt__footer_social
+                gap: 0.46rem
+                a
+                    width: 30px
+                    height: 20px
+                img
+                    width: 20px
+                    height: 20px
+        
+
+
