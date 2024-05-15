@@ -79,42 +79,20 @@ p
     margin-bottom: 0
     font-size: 1rem
     line-height: 1.3
-h1,.h1
-    font-size: clamp(32px,3.33vw, 66px) //64
-    font-weight: bold
 
-+max(575)
-    h1,h2
-        line-height: 1.2 !important
 
 h2,.h2
-    font-size: clamp(30px,2.19vw,46px) //42
-    font-weight: bold
-    margin-bottom: 15px
+    font-size: 42px
 h3,.h3
-    font-size: clamp(26px, 1.88vw,42px) //36
-    font-weight: bold
+    font-size: 36px
 h4
-    font-size: clamp(30px,2.62vw,55px) //51
+    font-size: 51px
 h5
-    font-size: clamp(24px,2.19vw,44px)	//42
+    font-size: 42px
 h6
-    font-size: clamp(16px,0.94vw,20px)	
+    font-size: 16px	
 
-.section-title
-    margin-bottom: 3rem
-    h2
-        font-size: 3.18rem
-        text-align: center
-    p
-        text-align: center
-        font-size: 1rem
 
-+max(575)
-    .section-title
-        h2
-            font-size: 1.8rem 
-            
 
 .align-baseline
     align-items: baseline
@@ -170,8 +148,7 @@ h6
     padding: 8px
     
     
-.page__content
-    flex: 1
+
 
 ul
     padding-left: 0
@@ -183,58 +160,7 @@ a
     transition: all 0.5s
 .hide
     display: none
-.btn
-    display: inline-block
-    padding: 15px
-    text-decoration: none
-    padding-left: 15px
-    padding-right: 15px
-    position: relative
-    border: 0
-    border-radius: 10px
-    cursor: pointer
-    font-size: clamp(16px, 1.25vw, 24px)
-    font-weight: 800
-    line-height: 1.3
-    color: $primary_color
-    transition: all 0.5s
-    img,svg
-        display: inline-block
-        margin-left: 10px
-        path
-            fill: #ffffff
 
-.primary_btn
-    transition: all 0.5s
-    &:hover
-        background-color: $black !important
-        color: $primary_color !important
-.secondary_btn
-    transition: all 0.5s
-    &:hover
-        color: $primary_color !important
-
-+mobile(1)
-    .btn
-        font-size: 14px
-.more-btn
-    text-decoration: underline
-    display: inline-flex
-    font-size: 14px
-    align-items: center
-    transition: all 0.5s
-    .arrow
-        margin-left: 10px
-.ma__title
-    position: relative    
-    &::before
-        position: absolute
-        content: ""
-        left: 0
-        top: 0
-        width: 38px
-        height: 6px
-        background: #000000
 // column css
 .col-2
     max-width: 20%
@@ -318,18 +244,6 @@ a
     .col-3, .col-4, .col-6, .col-8
         @include max-width(100%)
 
-// padding-margin
-.p-0
-    padding: 0
-.m-0
-    margin: 0
-
-//section padding
-.br__padding--top
-    padding-top: 5.20vw
-.br__section-space
-    padding-top: 2.60vw
-    padding-bottom: 2.60vw
 // display css
 .d-flex
     display: flex
@@ -359,156 +273,3 @@ a
 
 .uppercase
     text-transform: uppercase
-// Hero banner common css
-.br__comman-hero-sec
-    padding: 35vw 0 5vw
-    background-position: center center
-    background-repeat: no-repeat
-    text-align: center
-    background-size: cover
-    background-blend-mode: overlay
-    background-color: rgb(230 230 230 / 70%)
-    h1
-        font-family: 'Georgia'
-        font-weight: 800
-        margin-top: 40px
-    span
-        font-weight: 500
-    p
-        max-width: 50vw
-        margin: 0 auto
-        margin-top: 10px
-    a
-        margin-top: 40px
-+tablet
-    // Hero banner common css
-    .br__comman-hero-sec
-        p
-            max-width: 50vw
-+tablet
-    // Hero banner common css
-    .br__comman-hero-sec
-        p
-            max-width: 50vw
-+mobile
-    // Hero banner common css
-    .br__comman-hero-sec
-        padding: 100px 0
-        p
-            max-width: 80vw
-// accordion
-.accordion-container 
-    margin-top: 50px
-    .accordion-title
-        position: relative
-        margin: 0
-        color:  $secondary_color
-        cursor: pointer
-        transition: all 0.6s ease-in-out
-        &::after
-            content: "+"
-            position: absolute
-            top: 50%
-            right: 0
-            transform: translateY(-50%)
-            width: 30px
-            height: 30px
-            text-align: center
-            line-height: 30px
-        &.open::after
-            content: "-"
-            position: absolute
-        
-    .accordion-content
-        p
-            margin-top: 20px
-        a
-            display: block
-            width: max-content
-            margin: 20px 0 0 auto
-            color: $secondary_color
-            font-size: clamp(16px, 1.36vw, 26px)
-    .accordion-group
-        padding: 30px 0
-        &:last-child
-            border-bottom: none
-
-
-
-
-+mobile
-// Conversation
-.br__conversation-sec
-    .row
-        .br__conversation-content
-            max-width: 100%
-    .br__conversation-btn
-        margin-top: 20px
-    .br__ceo-feedback
-        margin: 22px 0 0 auto
-    .br__case-studies-shape
-        display: none
-    .swiper-casestudies-btn
-        margin-top: 20px
-// Start Conversation End
-
-+max(1366)
-    .modal 
-        .modal__content 
-            .modal__body 
-                .modal-content 
-                    .br__model-content
-                        padding: 0 20px
-                        .br__model-inner
-                            ul 
-                                li
-                                    &:not(last-child)
-                                        margin-bottom: 20px
-                    .container
-                        max-width: 100%
-+tablet
-    .modal 
-        .modal__content 
-            .modal__body
-                padding: 40px 20px
-                .modal-content 
-                    .br__model-content 
-                        .br__model-inner
-                            padding: 15px 0
-
-
-
-// +max(1600)
-//     .admin-bar 
-//         .main__page__content   
-//             margin-top: 8rem
-// +max(1440)
-//     .admin-bar 
-//         .main__page__content   
-//             margin-top: 7.5rem
-// +sd
-//     .admin-bar
-//         .main__page__content 
-//             margin-top: 4.7rem
-+tablet
-    .hero__banner-common 
-        .ma__hero-content
-            padding-top: 90px
-            padding-right: 20px
-            .ma__hero-content-title 
-                h1
-                    max-width: 100%
-        .ma__hero-image
-            background-position: 20% 100%
-    .main__page__content
-        margin-top: 0
-    .admin-bar
-        .main__page__content
-            margin-top: 0
-
-+mobile(1)
-    .btn
-        font-size: 14px
-+mobile(1)
-    .btn
-        font-size: 14px

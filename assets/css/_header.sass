@@ -1,452 +1,452 @@
 @import "_variable"
-.menu-open
-    overflow: hidden
-    // &::after
-    //     content: ""
-    //     background-color: rgba(0, 0, 48, 0.5)
-    //     position: absolute
-    //     width: 100%
-    //     height: 100%
-    //     display: block
-    //     top: 0
-.menu-open 
-    .main__page__content
-        position: relative
-.toggle__menu
-    width: 35px
-    height: 42px
-    line-height: 0.5
-    cursor: pointer
-    display: none
-    position: absolute
-    top: 45px
-    right: 20px
-    -webkit-tap-highlight-color: transparent
-    span
-        background-color: $primary_color
-        width: 100%
-        height: 3px
-        display: inline-block
-        border-radius: 8px
-    &.open
-        margin-top: 12px
-        span
-            &:nth-child(1)
-                transform: rotate(45deg)
-            &:nth-child(2)
-                display: none
-            &:nth-child(3)
-                transform: rotate(-45deg)
-                position: relative
-                top: -8px
-.header__main
-    padding: 50px 0 30px
-    transition: all 0.6s ease-in-out
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 11
-    .last_menu
-        flex-direction: row-reverse
-    .row
-        position: relative
-    &.fixed
-        background: $secondary_color
-        padding: 20px 0
-        -webkit-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
-        -moz-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
-        box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
-header
-    .down-arrow
-        display: inline-block
-        position: relative
-        bottom: 1px
-        right: 0
-        width: 8px
-        height: 8px
-        transition: all 0.6s ease-in-out
-        svg
-            path
-                fill: #ffffff
-    ul 
-        position: relative
-        li
-            a
-                color: $black
-                font-size: clamp(14px,1.25vw, 20px)
-                position: relative
-                font-weight: 600
-            a
-                &:hover
-                    &::after
-                        width: 100%
-                        transition: all 0.4s
-            &:hover
-                & > a
-                    color: $primary_color
-                & > .down-arrow
-                        svg
-                            path
-                                fill: $primary_color 
-            &.menu-item-has-children
-                & > a
-                    position: relative
-                    &:after
-                        // content: ""
-                        // position: absolute
-                        // bottom: -23px
-                        // right: -18px
-                        // width: 0
-                        // height: 0
-                        // border-style: solid
-                        // border-width: 0 13px 17px 13px
-                        // border-color: transparent transparent #ffffff transparent
-                        // opacity: 0
-                        // visibility: hidden
-                        // transition: all 0.6s ease-in-out
-                &:hover
-                    & > a
-                        &:after
-                            opacity: 1
-                            visibility: visible
-                            transition: all 0.6s ease-in-out
-            &.current-menu-item
-                & >
-                    a
-                        color: $primary_color
-            &:not(:last-child)
-                margin-right: 32px
-            &:hover
-                a
-                    & ~
-                        .sub-menu
-                            opacity: 1
-                            visibility: visible
-                            transition: all 0.6s ease-in-out
+// .menu-open
+//     overflow: hidden
+//     // &::after
+//     //     content: ""
+//     //     background-color: rgba(0, 0, 48, 0.5)
+//     //     position: absolute
+//     //     width: 100%
+//     //     height: 100%
+//     //     display: block
+//     //     top: 0
+// .menu-open 
+//     .main__page__content
+//         position: relative
+// .toggle__menu
+//     width: 35px
+//     height: 42px
+//     line-height: 0.5
+//     cursor: pointer
+//     display: none
+//     position: absolute
+//     top: 45px
+//     right: 20px
+//     -webkit-tap-highlight-color: transparent
+//     span
+//         background-color: $primary_color
+//         width: 100%
+//         height: 3px
+//         display: inline-block
+//         border-radius: 8px
+//     &.open
+//         margin-top: 12px
+//         span
+//             &:nth-child(1)
+//                 transform: rotate(45deg)
+//             &:nth-child(2)
+//                 display: none
+//             &:nth-child(3)
+//                 transform: rotate(-45deg)
+//                 position: relative
+//                 top: -8px
+// .header__main
+//     padding: 50px 0 30px
+//     transition: all 0.6s ease-in-out
+//     position: fixed
+//     top: 0
+//     left: 0
+//     width: 100%
+//     z-index: 11
+//     .last_menu
+//         flex-direction: row-reverse
+//     .row
+//         position: relative
+//     &.fixed
+//         background: $secondary_color
+//         padding: 20px 0
+//         -webkit-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
+//         -moz-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
+//         box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%)
+// header
+//     .down-arrow
+//         display: inline-block
+//         position: relative
+//         bottom: 1px
+//         right: 0
+//         width: 8px
+//         height: 8px
+//         transition: all 0.6s ease-in-out
+//         svg
+//             path
+//                 fill: #ffffff
+//     ul 
+//         position: relative
+//         li
+//             a
+//                 color: $black
+//                 font-size: clamp(14px,1.25vw, 20px)
+//                 position: relative
+//                 font-weight: 600
+//             a
+//                 &:hover
+//                     &::after
+//                         width: 100%
+//                         transition: all 0.4s
+//             &:hover
+//                 & > a
+//                     color: $primary_color
+//                 & > .down-arrow
+//                         svg
+//                             path
+//                                 fill: $primary_color 
+//             &.menu-item-has-children
+//                 & > a
+//                     position: relative
+//                     &:after
+//                         // content: ""
+//                         // position: absolute
+//                         // bottom: -23px
+//                         // right: -18px
+//                         // width: 0
+//                         // height: 0
+//                         // border-style: solid
+//                         // border-width: 0 13px 17px 13px
+//                         // border-color: transparent transparent #ffffff transparent
+//                         // opacity: 0
+//                         // visibility: hidden
+//                         // transition: all 0.6s ease-in-out
+//                 &:hover
+//                     & > a
+//                         &:after
+//                             opacity: 1
+//                             visibility: visible
+//                             transition: all 0.6s ease-in-out
+//             &.current-menu-item
+//                 & >
+//                     a
+//                         color: $primary_color
+//             &:not(:last-child)
+//                 margin-right: 32px
+//             &:hover
+//                 a
+//                     & ~
+//                         .sub-menu
+//                             opacity: 1
+//                             visibility: visible
+//                             transition: all 0.6s ease-in-out
     
-    .sub-menu
-        position: absolute
-        right: 0
-        top: 40px
-        opacity: 0
-        visibility: hidden
-        transition: all .3s ease
-        background-color: #ffffff
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
-        padding: 15px
-        transition: all 0.6s ease-in-out
-        z-index: 99
-        li
-            padding: 0
-            a
-                font-size: 16px
+//     .sub-menu
+//         position: absolute
+//         right: 0
+//         top: 40px
+//         opacity: 0
+//         visibility: hidden
+//         transition: all .3s ease
+//         background-color: #ffffff
+//         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+//         padding: 15px
+//         transition: all 0.6s ease-in-out
+//         z-index: 99
+//         li
+//             padding: 0
+//             a
+//                 font-size: 16px
 
-            &:not(:last-child)
-                margin-right: 0
-header 
-    ul 
-        li 
-            .sub-menu.mega-sub-menu
-                li
-                    flex: 0 0 130px
-                    max-width: 130px
-                    position: relative
-                    &:not(:last-child)
-                        &::after
-                            position: absolute
-                            content: ""
-                            right: 0
-                            top: 0
-                            width: 1px
-                            height: 60px
-                            background: #C5BDB8
-                .sub-menu-left
-                    .sub-menu-left-logo
-                        flex: 0 0 140px
-                        width: 140px
-                        max-width: 140px
-                        p
-                            font-size: 16px
-                            font-weight: 700
-            &.menu-item-has-children 
-                > 
-                    a
-                        &:after
-                            // box-shadow: 0px 3px 6px #00000029
-.sub-menu.mega-sub-menu
-    padding: 20px 20px 10px
-    margin: 0 -10px
-    li
-        margin: 0 0 5px !important
-        padding: 0 8px
-        .col-6
-            padding: 0 10px
-    a
-        display: block
-        .sub-menu-category-image
-            position: relative
-            overflow: hidden
-            display: flex
-            justify-content: center
-            img
-                width: 100%
-                height: 100%
-                position: absolute
-                top: 0
-                left: 0
-                right: 0
-                bottom: 0
-                object-fit: cover
-        .heading
-            margin-top: 10px
-            display: flex 
-            align-items: center
-            justify-content: center
-            p
-                font-size: 12px 
-                font-weight: 400
-                margin-bottom: 0  
-                line-height: 1 
-                text-transform: initial
-            img
-                position: static
-    .sub-menu-right
-        width: 100%
+//             &:not(:last-child)
+//                 margin-right: 0
+// header 
+//     ul 
+//         li 
+//             .sub-menu.mega-sub-menu
+//                 li
+//                     flex: 0 0 130px
+//                     max-width: 130px
+//                     position: relative
+//                     &:not(:last-child)
+//                         &::after
+//                             position: absolute
+//                             content: ""
+//                             right: 0
+//                             top: 0
+//                             width: 1px
+//                             height: 60px
+//                             background: #C5BDB8
+//                 .sub-menu-left
+//                     .sub-menu-left-logo
+//                         flex: 0 0 140px
+//                         width: 140px
+//                         max-width: 140px
+//                         p
+//                             font-size: 16px
+//                             font-weight: 700
+//             &.menu-item-has-children 
+//                 > 
+//                     a
+//                         &:after
+//                             // box-shadow: 0px 3px 6px #00000029
+// .sub-menu.mega-sub-menu
+//     padding: 20px 20px 10px
+//     margin: 0 -10px
+//     li
+//         margin: 0 0 5px !important
+//         padding: 0 8px
+//         .col-6
+//             padding: 0 10px
+//     a
+//         display: block
+//         .sub-menu-category-image
+//             position: relative
+//             overflow: hidden
+//             display: flex
+//             justify-content: center
+//             img
+//                 width: 100%
+//                 height: 100%
+//                 position: absolute
+//                 top: 0
+//                 left: 0
+//                 right: 0
+//                 bottom: 0
+//                 object-fit: cover
+//         .heading
+//             margin-top: 10px
+//             display: flex 
+//             align-items: center
+//             justify-content: center
+//             p
+//                 font-size: 12px 
+//                 font-weight: 400
+//                 margin-bottom: 0  
+//                 line-height: 1 
+//                 text-transform: initial
+//             img
+//                 position: static
+//     .sub-menu-right
+//         width: 100%
 
     
-+min(992)
-    header
-        ul 
-            position: relative
-            li
-                &:last-child
-                    padding: 0.73rem 1.59rem
-                    border-radius: 40px
-                    background-color: $black
-                    display: flex
-                    align-items: center
-                    gap: 10px
-                    a
-                        color: $white  
-+max(991)
-    header
-        ul 
-            position: relative
-            li
-                &:last-child
-                    img
-                        display: none
-                    a
-                        color: $black
-+max(1760)
-    header 
-        ul 
-            li
-                &:not(:last-child)
-                    margin-right: 25px
-+max(1600)
-    .header__main 
-        padding: 40px 0
-+max(1440)
-    header 
-        ul 
-            li
-                &:not(:last-child)
-                    margin-right: 20px
-+sd
-    .header__main 
-        padding: 20px 0
+// +min(992)
+//     header
+//         ul 
+//             position: relative
+//             li
+//                 &:last-child
+//                     padding: 0.73rem 1.59rem
+//                     border-radius: 40px
+//                     background-color: $black
+//                     display: flex
+//                     align-items: center
+//                     gap: 10px
+//                     a
+//                         color: $white  
+// +max(991)
+//     header
+//         ul 
+//             position: relative
+//             li
+//                 &:last-child
+//                     img
+//                         display: none
+//                     a
+//                         color: $black
+// +max(1760)
+//     header 
+//         ul 
+//             li
+//                 &:not(:last-child)
+//                     margin-right: 25px
+// +max(1600)
+//     .header__main 
+//         padding: 40px 0
+// +max(1440)
+//     header 
+//         ul 
+//             li
+//                 &:not(:last-child)
+//                     margin-right: 20px
+// +sd
+//     .header__main 
+//         padding: 20px 0
 
 
-+tablet
-    .header
-        ul
-            li
-                &:not(:last-child)
-                    margin-right: 20px
-            .header__menu
-                margin-top: 7px
-        .contact__links
-            ul
-                li
-                    &:not(:last-child)
-                        a
-                            margin-right: 10px
-                            padding-right: 10px
-                    a
-                        font-size: 12px
-    .header__main
-        padding: 20px 0
-        position: static
-    .header__menu
-        margin-top: 10px
-    .header
-        .sub-menu.mega-sub-menu
-            width: 530px
-            padding-bottom: 0
-            padding: 15px 5px
-        .sub-menu
-            top: 35px
-            padding: 15px
-        .down-arrow
-            top: 4px
-+mobile
-    header ul li 
-        .sub-menu.mega-sub-menu 
-            li
-                flex: 0 0 100px
-                max-width: 100px
-    .header__main
-        .col-2
-            max-width: 30%
-            flex: 0 0 30%
-        .col-10
-            max-width: 70%
-            flex: 0 0 70%
-@media (max-width: 1800px)
-    .header
-        ul
-            li
-                a
-                    font-size: 14px
-                &:not(:last-child)
-                    margin-right: 20px
-+tablet
-    .toggle__menu
-        display: block
-        z-index: 9
-    .header__menu
-        display: none
-        position: fixed
-        top: 110px
-        left: -110%
-        width: 80%
-        height: 100vw
-        overflow-x: hidden
-        transition: all 0.5s
-        border-radius: 0
-        padding: 30px
-        margin: 0
-        z-index: 999
-        background-color: $secondary_color
-        &.active
-            display: block
-            left: 0
-        ul
-            display: block
-            li
-                a
-                    font-size: 16px
-                &:not(:last-child)
-                    padding: 0
-                    margin: 0 0 10px
-    header 
-        ul 
-            li 
-                &:hover 
-                    a 
-                        & ~ .sub-menu 
-                            opacity: 0 
-                            visibility: hidden 
-                            transition: none 
-        .sub-menu 
-            &.mega-sub-menu 
-                &.show 
-                    opacity: 1 
-                    visibility: visible 
-                    width: 100% !important 
-                    display: flex 
-                    position: static 
-                    margin: 15px 0 0 
-                    li 
-                        flex: 0 0 33% 
-                        max-width: 33% 
-        .menu-item-has-children
-            &.active > .sub-menu
-                width: 100% !important
-                position: static
-                margin: 15px 0 0
-                opacity: 1
-                visibility: visible
-            .sub-menu-right
-                ul
-                    display: flex
-                    flex-wrap: wrap
+// +tablet
+//     .header
+//         ul
+//             li
+//                 &:not(:last-child)
+//                     margin-right: 20px
+//             .header__menu
+//                 margin-top: 7px
+//         .contact__links
+//             ul
+//                 li
+//                     &:not(:last-child)
+//                         a
+//                             margin-right: 10px
+//                             padding-right: 10px
+//                     a
+//                         font-size: 12px
+//     .header__main
+//         padding: 20px 0
+//         position: static
+//     .header__menu
+//         margin-top: 10px
+//     .header
+//         .sub-menu.mega-sub-menu
+//             width: 530px
+//             padding-bottom: 0
+//             padding: 15px 5px
+//         .sub-menu
+//             top: 35px
+//             padding: 15px
+//         .down-arrow
+//             top: 4px
+// +mobile
+//     header ul li 
+//         .sub-menu.mega-sub-menu 
+//             li
+//                 flex: 0 0 100px
+//                 max-width: 100px
+//     .header__main
+//         .col-2
+//             max-width: 30%
+//             flex: 0 0 30%
+//         .col-10
+//             max-width: 70%
+//             flex: 0 0 70%
+// @media (max-width: 1800px)
+//     .header
+//         ul
+//             li
+//                 a
+//                     font-size: 14px
+//                 &:not(:last-child)
+//                     margin-right: 20px
+// +tablet
+//     .toggle__menu
+//         display: block
+//         z-index: 9
+//     .header__menu
+//         display: none
+//         position: fixed
+//         top: 110px
+//         left: -110%
+//         width: 80%
+//         height: 100vw
+//         overflow-x: hidden
+//         transition: all 0.5s
+//         border-radius: 0
+//         padding: 30px
+//         margin: 0
+//         z-index: 999
+//         background-color: $secondary_color
+//         &.active
+//             display: block
+//             left: 0
+//         ul
+//             display: block
+//             li
+//                 a
+//                     font-size: 16px
+//                 &:not(:last-child)
+//                     padding: 0
+//                     margin: 0 0 10px
+//     header 
+//         ul 
+//             li 
+//                 &:hover 
+//                     a 
+//                         & ~ .sub-menu 
+//                             opacity: 0 
+//                             visibility: hidden 
+//                             transition: none 
+//         .sub-menu 
+//             &.mega-sub-menu 
+//                 &.show 
+//                     opacity: 1 
+//                     visibility: visible 
+//                     width: 100% !important 
+//                     display: flex 
+//                     position: static 
+//                     margin: 15px 0 0 
+//                     li 
+//                         flex: 0 0 33% 
+//                         max-width: 33% 
+//         .menu-item-has-children
+//             &.active > .sub-menu
+//                 width: 100% !important
+//                 position: static
+//                 margin: 15px 0 0
+//                 opacity: 1
+//                 visibility: visible
+//             .sub-menu-right
+//                 ul
+//                     display: flex
+//                     flex-wrap: wrap
 
-+tablet
-    .header__menu
-        width: 100%
-        top: 0px
-        padding: 20px
-        display: flex !important
-        justify-content: center
-        align-items: center
-        height: 100vh
-        ul
-            display: flex
-            flex-direction: column
-            gap: 30px
-            li
-                a
-                    color: $black
-                    font-size: 1.3rem
-    .toggle__menu
-        top: 10px
-        z-index: 999
+// +tablet
+//     .header__menu
+//         width: 100%
+//         top: 0px
+//         padding: 20px
+//         display: flex !important
+//         justify-content: center
+//         align-items: center
+//         height: 100vh
+//         ul
+//             display: flex
+//             flex-direction: column
+//             gap: 30px
+//             li
+//                 a
+//                     color: $black
+//                     font-size: 1.3rem
+//     .toggle__menu
+//         top: 10px
+//         z-index: 999
     
-+max(650)
-    header 
-        ul 
-            li 
-                .sub-menu.mega-sub-menu 
+// +max(650)
+//     header 
+//         ul 
+//             li 
+//                 .sub-menu.mega-sub-menu 
                     
-                    li
-                        margin-bottom: 15px !important
-                        &:not(:last-child)
-                            &::after
-                                display: none
-@media (max-width: 490px)
-    .header__main
-        .col-2
-            max-width: 50%
-            flex: 0 0 50%
-        .col-10
-            max-width: 50%
-            flex: 0 0 50%
-    header 
-        .sub-menu.mega-sub-menu
-            flex-wrap: wrap
-            &.show 
-                li    
-                    flex: 0 0 50%
-                    max-width: 50%
-            .sub-menu-left
-                margin-bottom: 15px
-        .toggle__menu
-            width: 30px
-            line-height: 0.3
+//                     li
+//                         margin-bottom: 15px !important
+//                         &:not(:last-child)
+//                             &::after
+//                                 display: none
+// @media (max-width: 490px)
+//     .header__main
+//         .col-2
+//             max-width: 50%
+//             flex: 0 0 50%
+//         .col-10
+//             max-width: 50%
+//             flex: 0 0 50%
+//     header 
+//         .sub-menu.mega-sub-menu
+//             flex-wrap: wrap
+//             &.show 
+//                 li    
+//                     flex: 0 0 50%
+//                     max-width: 50%
+//             .sub-menu-left
+//                 margin-bottom: 15px
+//         .toggle__menu
+//             width: 30px
+//             line-height: 0.3
 
-.menu-item 
-    a
-        &:after
-            content: none !important
-.home,.team
-    header
-        .down-arrow 
-            svg 
-                path
-                    fill: $primary_color
-        .header__main
-            &.fixed
-                background: $secondary_color
-                padding: 20px 0
-                .header__logo
-                    svg
-                        path
-                            fill: $primary_color
+// .menu-item 
+//     a
+//         &:after
+//             content: none !important
+// .home,.team
+//     header
+//         .down-arrow 
+//             svg 
+//                 path
+//                     fill: $primary_color
+//         .header__main
+//             &.fixed
+//                 background: $secondary_color
+//                 padding: 20px 0
+//                 .header__logo
+//                     svg
+//                         path
+//                             fill: $primary_color
 
-+min(992)
-    .header__menu
-        position: relative
-        bottom: 1rem
+// +min(992)
+//     .header__menu
+//         position: relative
+//         bottom: 1rem
