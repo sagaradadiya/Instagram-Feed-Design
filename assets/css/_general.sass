@@ -4,21 +4,14 @@
 
 *
     outline: none !important
-html
-    font-size: 22px
 
-+max(1580)
-    html
-        font-size: 18px
-+max(1280)
-    html
-        font-size: 16px
 
 html,body
     margin: 0
     padding: 0
     font-family: 'Red Hat Display', sans-serif
     font-weight: 400
+    font-size: 16px
 svg
     max-width: 100%
 img
@@ -51,13 +44,7 @@ a
 //         margin-top: 13rem
 section
     position: relative
-.row
-    display: -ms-flexbox
-    display: flex
-    -ms-flex-wrap: wrap
-    flex-wrap: wrap
-    margin-right: -15px
-    margin-left: -15px
+
 .container
     display: block
     margin-left: auto
@@ -161,70 +148,61 @@ a
 .hide
     display: none
 
-// column css
+
+
+//row-column css
+.row
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin-right: -7.5px
+    margin-left: -7.5px
+.row
+    [class*="col-"]
+        padding-left: 7.5px
+        padding-right: 7.5px
+        margin-bottom: 15px
+    
 .col-2
     max-width: 20%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 20%
 .col-3
     max-width: 25%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 25%
 .col-4
     max-width: 33.33%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 33.33%
 .col-40
     max-width: 40%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 40%
 .col-5
     max-width: 45%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 45%
 .col-55
     max-width: 55%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 55%
 .col-6
     max-width: 50%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 50%
 .col-7
     max-width: 75%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 75%
 .col-8
     max-width: 60%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 60%
 .col-10
     max-width: 80%
-    padding-left: 15px
-    padding-right: 15px
     flex: 0 0 80%
 .col-12
     max-width: 100%
     flex: 0 0 100%
-    padding-left: 15px
-    padding-right: 15px
 .col
     -ms-flex-preferred-size: 0
     flex-basis: 0
     -ms-flex-positive: 1
     flex-grow: 1
     max-width: 100%
-    padding-left: 15px
-    padding-right: 15px
 
 +max(1260)
     .container	
@@ -273,3 +251,5 @@ a
 
 .uppercase
     text-transform: uppercase
+.no-scroll
+    overflow: hidden
