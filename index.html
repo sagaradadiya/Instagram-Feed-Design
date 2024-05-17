@@ -1,194 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Instagram Feed Viewer</title>
-    <meta name="description" content="">
-    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Instagram Feed Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <style>
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-        }
-
-        .grid-item {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer;
-        }
-
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 99999;
-        }
-
-        .popup img {
-            max-width: 100%;
-            max-height: 100%;
-            display: block;
-            margin: auto;
-        }
-
-        .close-popup {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #fff;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        .insta-grid-img {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            padding-top: 90%;
-        }
-
-        .insta-grid-img img {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .insta_popup-content {
-            -webkit-transform: translate(0, -25%);
-            -ms-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-            -webkit-transition: -webkit-transform 0.3s ease-out;
-            -o-transition: -o-transform 0.3s ease-out;
-            transition: -webkit-transform 0.3s ease-out;
-            -o-transition: transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-            transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-            vertical-align: middle;
-            width: 600px;
-            margin: 30px auto;
-            max-width: 97%;
-        }
-        .insta_popup-img{
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            padding-top: 125%;
-            position: relative;
-        }
-        .insta_popup-img img {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/insta-grid.css">
 </head>
 
 <body>
     <section>
         <div class="container">
             <div class="instagram-grid">
+                <!-- Grid Item 1 -->
                 <div class="grid-item">
                     <div class="insta-grid-img">
                         <img src="../assets/images/1.jpg" alt="Instagram Post" data-popup="popup1">
                     </div>
                     <div id="popup1" class="popup">
-                        <span class="close-popup">&times;</span>
-                        <div class="insta_popup-content">
+                        <div class="popup-content">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="insta_popup-img">
-                                        <img src="../assets/images/1.jpg" alt="Instagram Post">
+                                    <div class="swiper ig_popup-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="insta_popup-img">
+                                                    <img src="../assets/images/1.jpg" alt="Instagram Post">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="insta_popup-img">
+                                                    <img src="../assets/images/2.jpg" alt="Instagram Post">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="insta_popup-img">
+                                                    <img src="../assets/images/1.jpg" alt="Instagram Post">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
                                     </div>
                                 </div>
-                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <div class="post-details">
+                                        <div class="username">Username</div>
+                                        <div class="description">Caption text goes here... #Hashtag1 #Hashtag2</div>
+                                        <div class="likes">Likes: 100</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>  
+                        </div>
+                        <span class="close-popup">&times;</span>
                     </div>
                 </div>
+                <!-- Additional Grid Items (same structure) -->
+                <!-- Grid Item 2 -->
                 <div class="grid-item">
                     <div class="insta-grid-img">
                         <img src="../assets/images/2.jpg" alt="Instagram Post" data-popup="popup2">
                     </div>
                     <div id="popup2" class="popup">
-                        <span class="close-popup">&times;</span>
-                        <div class="insta_popup-content">
-                        <img src="../assets/images/2.jpg" alt="Instagram Post">
+                        <div class="popup-content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="swiper ig_popup-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="insta_popup-img">
+                                                    <img src="../assets/images/2.jpg" alt="Instagram Post">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="insta_popup-img">
+                                                    <img src="../assets/images/1.jpg" alt="Instagram Post">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="post-details">
+                                        <div class="username">Username</div>
+                                        <div class="description">Caption text goes here... #Hashtag3 #Hashtag4</div>
+                                        <div class="likes">Likes: 200</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="insta-grid-img">
-                        <img src="../assets/images/2.jpg" alt="Instagram Post" data-popup="popup2">
-                    </div>
-                    <div id="popup2" class="popup">
                         <span class="close-popup">&times;</span>
-                        <img src="../assets/images/2.jpg" alt="Instagram Post">
                     </div>
                 </div>
-                <div class="grid-item">
-                    <div class="insta-grid-img">
-                        <img src="../assets/images/1.jpg" alt="Instagram Post" data-popup="popup3">
-                    </div>
-                    <div id="popup3" class="popup">
-                        <span class="close-popup">&times;</span>
-                        <img src="../assets/images/2.jpg" alt="Instagram Post">
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="insta-grid-img">
-                        <img src="../assets/images/1.jpg" alt="Instagram Post" data-popup="popup3">
-                    </div>
-                    <div id="popup3" class="popup">
-                        <span class="close-popup">&times;</span>
-                        <div class="insta_popup-content">
-                            <img src="../assets/images/2.jpg" alt="Instagram Post">
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more grid items as needed -->
+                <!-- Additional Grid Items can follow similar structure -->
             </div>
         </div>
     </section>
 
-
     <footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="assets/js/smooth-scroll.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="assets/js/main.js"></script>
         <script>
@@ -202,13 +120,25 @@
 
                 // Close popup on close icon click
                 $('.close-popup').click(function () {
-                    $(this).parent('.popup').fadeOut();
+                    $(this).closest('.popup').fadeOut();
                     $('body').removeClass('popup-open'); // Remove class to enable scrolling
+                });
+
+                // Initialize Swiper
+                var swiper = new Swiper(".ig_popup-slider", {
+                    spaceBetween: 30,
+                    effect: "fade", // You can change the effect to "slide", "cube", "coverflow", "flip"
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
                 });
             });
         </script>
-
-
     </footer>
 </body>
 
