@@ -146,21 +146,3 @@
 .popup-content .row{  
 margin: 0;
 }
-/* Media Queries */
-/* @media screen and (max-width: 768px) {
-  .popup {
-      height: 80%;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .popup {
-      height: 70%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .popup {
-      height: 60%;
-  }
-} */
